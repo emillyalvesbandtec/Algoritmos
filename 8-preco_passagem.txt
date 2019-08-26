@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    Valor da passagem<input type="text" id="valor_passagem"> <br>
+    Quantas viagens fara no mês<input type="text" id="quantas_viagens"> <br>
+    <button onclick="ver_economia()">Ver economia</button>
+
+</body>
+</html>
+
+<script>
+
+    function ver_economia(){
+        var economizado = (valor_passagem.value * quantas_viagens.value)/2;
+
+        alert(`Você economizará R$${economizado} por mês`);
+    };
+
+</script>
