@@ -1,0 +1,45 @@
+//erradooooooooooooooooooo
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Valor do primeiro termo 
+    <br> <input id="primeiro_termo"> <br>
+
+    Valor da razão
+    <br> <input id="valor_razao"> <br>
+
+    Termo que o usuario deseja obter
+    <br> <input id="termo_obter"> <br>
+
+    <button onclick="mostrar_termo()">Calcular PG</button>
+
+</body>
+</html>
+
+<script>
+
+    function mostrar_termo(){
+        
+        var resultado_termo
+
+       for(i=0; i<termo_obter.value; i++){
+
+           var resultado_termo = primeiro_termo.value ** valor_razao.value 
+        
+       }
+        alert(`O ${termo_obter.value} termo dessa PG será ${resultado_termo}`);
+
+    }
+
+</script>
