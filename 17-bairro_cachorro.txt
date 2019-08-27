@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    Quanto eu como por dia? <br>
+    Informe o bairro aonde você mora <input id="bairro"> <br>
+    Quantidades de cachorros que você possui <input id="cachorro"> <br>
+
+    <button onclick="analise_pet()">Análise Pet</button>
+
+    <br><br>
+    <div id="div_mensagem" style="display: none"></div>
+
+</body>
+</html>
+
+<script>
+
+    function analise_pet(){
+        div_mensagem.innerHTML = `Você mora em ${bairro.value} e tem ${cachorro.value} cachorros`;
+
+        div_mensagem.style.display = 'block';
+        div_mensagem.style.color = 'red';
+    }
+
+</script>
