@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Digite a sua nota da avaliação continuada
+    <br> <input type="text" id="nota_avaliacao_continuada"> <br>
+
+    Digite a sua nota da avaliação semestral
+    <br> <input type="text" id="nota_avaliacao_semestral"> <br>
+
+    Digite a seu nome
+    <br> <input type="text" id="nome_aluno"> <br>
+
+    <button onclick="exiba_media()">Exiba a média</button>
+
+</body>
+</html>
+
+<script>
+
+    function exiba_media(){
+
+        var peso_avaliacao_continuada = nota_avaliacao_continuada.value * 0.40;
+
+        var peso_avaliacao_semestral = nota_avaliacao_semestral.value * 0.60;
+
+        var media_nota = (peso_avaliacao_continuada + peso_avaliacao_semestral) / 2;
+
+        alert(`A média de ${nome_aluno.value} será de ${media_nota}`);
+        
+    }
+
+</script>
