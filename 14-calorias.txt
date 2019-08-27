@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Quantos pães franceses você consumiu hoje
+    <br> <input id="qtd_pao_frances"> <br>
+
+    Quantas casquinhas você consumiu hoje
+    <br> <input id="qtd_casquinha"> <br>
+
+    Quantos minutos de caminhada você fez hoje
+    <br> <input id="minuto_caminhada"> <br>
+
+    Quantos minutos de musculação você fez hoje
+    <br> <input id="minuto_musculacao"> <br>
+
+    <button onclick="mostrar_calorias()">Mostrar calorias</button>
+
+</body>
+</html>
+
+<script>
+
+    function mostrar_calorias(){
+
+        var caloria_ganha = (qtd_casquinha.value * 300) + (qtd_pao_frances.value * 100);
+
+        var caloria_perdida = (minuto_caminhada.value * 50) + (minuto_musculacao.value * 30);
+
+        var total_caloria = caloria_ganha - caloria_perdida;
+
+            alert(`Entre calorias que ganhou e perdeu, seu saldo de calorias no dia é de ${total_caloria}`);
+
+    }
+
+</script>
