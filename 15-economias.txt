@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Quantidade de moedas depositadas por cada filho <br>
+
+    Huginho
+    <br> <input id="qtd_moeda_huginho"> <br>
+
+    Zezinho
+    <br> <input id="qtd_moeda_zezinho"> <br>
+
+    Luizinho
+    <br> <input id="qtd_moeda_luizinho"> <br>
+
+
+    <button onclick="mostrar_economia()">Mostrar quanto cada um tem</button>
+
+</body>
+</html>
+
+<script>
+
+    function mostrar_economia(){
+
+        var economia_huginho = qtd_moeda_huginho.value * 0.50;
+
+        var economia_zezinho = qtd_moeda_zezinho.value * 0.50;
+
+        var economia_luizinho = qtd_moeda_luizinho.value * 0.50;
+
+        alert(`O Huginho economizou R$${economia_huginho} pois fez ${qtd_moeda_huginho.value} depósitos`);
+
+        alert(`O Zezinho economizou R$${economia_zezinho} pois fez ${qtd_moeda_zezinho.value} depósitos`);
+
+        alert(`O Luizinho economizou R$${economia_luizinho} pois fez ${qtd_moeda_luizinho.value} depósitos`);
+
+    }
+
+</script>
