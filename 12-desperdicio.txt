@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Quantos minutos a torneira 1 ficou pingando
+    <br> <input type="text" id="torneira_1"> <br>
+
+    Quantos minutos a torneira 2 ficou pingando
+    <br> <input type="text" id="torneira_2"> <br>
+
+    Quantos minutos a torneira 3 ficou pingando
+    <br> <input type="text" id="torneira_3"> <br>
+
+    <button onclick="economia_agua()">Exiba a média</button>
+
+</body>
+</html>
+
+<script>
+
+    function economia_agua(){
+
+        var valor_total_desperdicio = (torneira_1.value * 15) + (torneira_2.value * 15) + (torneira_3.value * 15);
+
+        alert(`Suas 3 torneiras, juntas, desperdiçaram ${valor_total_desperdicio} litros de água`);
+
+    }
+
+</script>
