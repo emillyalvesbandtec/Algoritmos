@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Digite o valor do sálario bruto do usuário
+    <br> <input id="salario_bruto"> <br>
+
+    <button onclick="mostrar_salario()">Mostrar salario liquido</button>
+
+</body>
+</html>
+
+<script>
+
+    function mostrar_salario(){
+
+        var desconto_inss = salario_bruto.value * 0.10;
+
+        var desconto_ir = salario_bruto.value * 0.20;
+
+        var desconto_sindical = salario_bruto.value / 30;
+
+        var salario_liquido = (((salario_bruto.value - desconto_inss) - desconto_ir) - desconto_sindical);
+
+        alert(`Apesar de seu bruto ser R$${salario_bruto.value}, após os descontos, você receberá somente R$${salario_liquido}.`);
+
+    }
+
+</script>
