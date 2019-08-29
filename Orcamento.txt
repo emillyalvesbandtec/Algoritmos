@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Quanto você deseja guardar por mês? <br>
+    <br> <input type="text" id="guardar_mes"> <br>
+
+    <br> <button onclick="ver_planejamento()">Ver planejamento</button>
+
+    <br> <br>
+
+    <div id="div_casa" style="display: none; color: blue"></div> <br><br>
+
+    <div id="div_carro" style="display: none; color: blue"></div> <br><br>
+
+    <div id="div_viagem" style="display: none; color: blue"></div> <br><br>
+
+</body>
+</html>
+
+<script>
+
+    function ver_planejamento(){
+        
+        var mes_compra_casa = 300000 / guardar_mes.value; //Calculo para ver quantos meses ele irá demorar para comprar uma casa que custa R$300.000,00
+        var ano_compra_casa = mes_compra_casa / 12;
+
+        var mes_compra_carro = 20000 / guardar_mes.value; //Calculo para ver quantos meses ele irá demorar para comprar um carro que custa R$20.000,00
+        var ano_compra_carro = mes_compra_carro / 12;
+
+        var mes_viagem = 80000 / guardar_mes.value; //Calculo para ver quantos meses ele irá demorar para poder viajar para o Cánada que totaliza em R$80.000,00
+        var ano_viagem = mes_viagem / 12;
+
+
+        div_casa.innerHTML = `Guardando <b>R$${guardar_mes.value}</b> por mês, conseguirá comprar a casa em <b>${mes_compra_casa.toFixed(0)} meses</b> OU <b>A ${ano_compra_casa.toFixed(1)} anos</b>`;
+        div_casa.style.display = 'block';
+
+
+        div_carro.innerHTML = `Guardando <b>R$${guardar_mes.value}</b> por mês, conseguirá comprar a carro em <b>${mes_compra_carro.toFixed(0)} meses</b> OU <b>A ${ano_compra_carro.toFixed(1)} anos</b>`;
+        div_carro.style.display = 'block';
+
+
+        div_viagem.innerHTML = `Guardando <b>R$${guardar_mes.value}</b> por mês, conseguirá fazer a viagem em <b>${mes_viagem.toFixed(0)} meses</b> OU <b>A ${ano_viagem.toFixed(1)} anos</b>`;
+        div_viagem.style.display = 'block';
+    }
+
+</script>
