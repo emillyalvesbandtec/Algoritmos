@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atalhos matemáticos</h1>
+
+    Digite o valor do salario do irmão de Igor: <br>
+    <input type="text" id="salario_irmao_igor"><br>
+
+    Digite a quantidade de ficantes do irmão de Igor: <br>
+    <input type="text" id="ficantes_irmao_igor"><br>
+
+    Digite a quantidade de foras que o irmão de Igor ja levou: <br>
+    <input type="text" id="foras_irmao_igor"><br>
+
+    <br><button onclick="calcular_meta_igor()">Calcular a meta de Igor</button>
+
+</body>
+</html>
+
+<script>
+    function calcular_meta_igor(){
+        var meta_igor_salario = Number(salario_irmao_igor.value);
+        meta_igor_salario += meta_igor_salario * 0.10;
+
+        var meta_igor_ficantes = Number(ficantes_irmao_igor.value);
+        meta_igor_ficantes ++;
+
+        var meta_igor_foras = Number(foras_irmao_igor.value);
+        meta_igor_foras --;
+        
+        alert(`A meta de salario de Igor é R$${meta_igor_salario.toFixed(2)}`);
+
+        alert(`A meta de ficantes de Igor ${meta_igor_ficantes}`);
+
+        alert(`A meta foras de Igor ${meta_igor_foras}`);
+    }
+</script>
