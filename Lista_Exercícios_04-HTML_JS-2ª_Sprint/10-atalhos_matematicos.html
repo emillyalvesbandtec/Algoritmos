@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atalhos matemáticos</h1>
+
+    Digite o seu salario: <br>
+    <input type="text" id="salario"><br>
+
+    Digite a mesada do seu filho: <br>
+    <input type="text" id="mesada_filho"><br>
+
+    Digite o valor do abono de Natal: <br>
+    <input type="text" id="abono_natal"><br>
+
+    <br><button onclick="calcular_saldo()">Calcular saldo</button>
+
+</body>
+</html>
+
+<script>
+    function calcular_saldo(){
+        var salario_bruto = Number(salario.value);
+
+        salario_bruto -= mesada_filho.value;
+
+        salario_bruto += Number(abono_natal.value);
+
+        alert(`O total do seu saldo é de R$${salario_bruto.toFixed(2)}`);
+    }
+</script>
