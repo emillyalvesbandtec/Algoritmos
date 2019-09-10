@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Informe o primeiro valor <br>
+    <input type="text" id="primeiro_valor"> <br><br>
+
+    Informe o segundo valor <br>
+    <input type="text" id="segundo_valor"><br><br>
+
+    <button onclick="soma()">Soma</button> <br>
+
+    <button onclick="diferenca()">Diferença</button> <br>
+
+    <button onclick="produto()">Produto</button> <br>
+
+    <button onclick="razao()">Razão</button> <br><br>
+
+    <div id="resultado_equacao"> </div>
+    
+</body>
+</html>
+
+<script>
+
+    function soma(){
+        resultado_equacao.innerHTML = `${Number(primeiro_valor.value) + Number(segundo_valor.value)}`;
+    }
+    
+    function diferenca(){
+        resultado_equacao.innerHTML = `${Number(primeiro_valor.value) - Number(segundo_valor.value)}`;
+    }
+
+    function produto(){
+        resultado_equacao.innerHTML = `${Number(primeiro_valor.value) * Number(segundo_valor.value)}`;
+    }
+
+    function razao(){
+        resultado_equacao.innerHTML = `${Number(primeiro_valor.value) / Number(segundo_valor.value)}`;
+    }
+
+</script>
