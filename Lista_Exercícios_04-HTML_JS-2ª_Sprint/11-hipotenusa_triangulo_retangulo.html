@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atalhos matemáticos</h1>
+
+    Digite o valor do primeiro cateto: <br>
+    <input type="text" id="primeiro_cateto"><br>
+
+    Digite a valor do segundo cateto: <br>
+    <input type="text" id="segundo_cateto"><br>
+
+    <br><button onclick="calcular_hipotenusa()">Calcular hipotenusa</button>
+
+</body>
+</html>
+
+<script>
+    function calcular_hipotenusa(){
+        var first_cateto = Number(primeiro_cateto.value) ** 2;
+        var second_cateto = Number(segundo_cateto.value) ** 2;
+
+        var hipotenusa = first_cateto + second_cateto;
+
+        alert(`O valor da hipotenusa é: ${Math.sqrt(hipotenusa)}²`);
+    }
+</script>
