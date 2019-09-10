@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Informe a sua nota <br>
+    <input type="text" id="nota_usuario"> <br>
+
+    <button onclick="opiniao_vo()">Opinião da vó</button>
+
+    <button onclick="opiniao_mae()">Opinião da mãe</button>
+</body>
+</html>
+
+<script>
+
+    function opiniao_vo(){
+        alert(`Muito bem, que neto inteligente, porque tirou ${nota_usuario.value}`);
+    }
+
+    function opiniao_mae(){
+        alert(`Não fez mais que tua obrigação com essa nota ${nota_usuario.value}`);
+    }
+
+</script>
