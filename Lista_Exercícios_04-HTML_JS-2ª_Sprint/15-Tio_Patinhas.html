@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="color: blue">
+        Total guardado no cofrinho: R$<u id="total_guardado_cofrinho"></u>
+        <br>
+        Depósitos efetuados:<u id="total_depositos"></u>
+    </div>
+
+    <button onclick="depositar_50cents()">Depositar 0,50</button>
+    <button onclick="depositar_2reais()">Depositar 2,00</button>
+
+</body>
+</html>
+
+<script>
+
+    var total_guardado = 0;
+    var depositos = 0;
+
+    function depositar_50cents(){
+        total_guardado += 0.50;
+        depositos ++;
+
+        total_guardado_cofrinho.innerHTML = total_guardado.toFixed(2);
+        total_depositos.innerHTML = depositos;
+    }
+
+    function depositar_2reais(){
+        total_guardado += 2;
+        depositos ++;
+
+        total_guardado_cofrinho.innerHTML = total_guardado.toFixed(2);
+        total_depositos.innerHTML = depositos;
+    }
+
+</script>
