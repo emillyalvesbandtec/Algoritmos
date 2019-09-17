@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     
+        Lista supensa ou "combo box"
+        <select id="produtos">
+            <option> - Escolha uma fruta - </option>
+            <option value="4">Leite</option>
+            <option value="10">Arroz</option>
+            <option value="2">Bolacha</option>
+            <option value="2">Biscoito</option>
+        </select>
+
+        <button onclick="ver_preco()">Ver preço</button>
+
+</body>
+</html>
+
+<script>
+
+    function ver_preco(){
+        var frutas = Number(produtos.value);
+        alert(`Isso custa R$${frutas.toFixed(2)}`);
+    }
+
+</script>
