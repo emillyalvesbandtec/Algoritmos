@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="color: rgb(3, 88, 0)">
+        Votos na <u>Praça é nossa:</u> <u id="total_votos_praca_nossa"></u>
+        <br>
+        Votos no <u>Zorra Total:</u> <u id="total_votos_zorra_total"></u>
+        <br>
+        Total de votos: <span id="total_quantidade_votos"></span>
+    </div>
+
+    <button onclick="votar_praca_nossa()">Votar na Praça é nossa</button>
+    <button onclick="votar_zorra_total()">Votar no Zorra Total</button>
+
+</body>
+</html>
+
+<script>
+
+    var votos_zorra_total = 0;
+    var votos_praca_nossa = 0;
+    var total_votos = 0;
+
+    function votar_praca_nossa(){
+        votos_praca_nossa ++;
+        total_votos ++;
+
+        total_votos_praca_nossa.innerHTML = votos_praca_nossa;
+        total_quantidade_votos.innerHTML = total_votos;
+    }
+
+    function votar_zorra_total(){
+        votos_zorra_total ++;
+        total_votos ++;
+
+        total_votos_zorra_total.innerHTML = votos_zorra_total;
+        total_quantidade_votos.innerHTML = total_votos;
+    }
+
+</script>
