@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     
+        <select id="produtos">
+            <option> - Escolha uma fruta - </option>
+            <option value="Amor">Ódio</option>
+            <option value="Esperança">Desespero</option>
+            <option value="Perdão">Ofensa</option>
+        </select>
+
+        <button onclick="fazer_oracao()">Fazer oração</button>
+
+</body>
+</html>
+
+<script>
+
+    function fazer_oracao(){
+        alert(`${produtos.value}`);
+    }
+
+</script>
