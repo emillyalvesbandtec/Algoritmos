@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     
+    <img onclick="votar_zakk()" src="https://i.pinimg.com/originals/63/b2/24/63b224bcc23be60053105e63faa28196.jpg" alt="">
+    <span style="font-size: 20px">Votos: <span id="total_votos_zakk"></span></span>
+
+    <img onclick="votar_carole_tuesday()" onclick="votar_carole_tuesday()" style="height: 450px" src="https://d17389e216ygm.cloudfront.net/wp-content/uploads/CE_CaroleTuesday-1.jpg" alt="">
+    <span style="font-size: 20px">Votos: <span id="total_votos_carole_tuesday"></span></span>
+    <br>
+    <span>Total Votos: <span id="total_votos"></span></span>
+
+</body>
+</html>
+
+<script>
+
+    var votos_zakk = 0;
+    var votos_carole_tueday = 0;
+    var votos = 0;
+
+    function votar_zakk(){
+        votos_zakk ++;
+        votos ++;
+
+        total_votos_zakk.innerHTML = votos_zakk;
+        total_votos.innerHTML = votos;
+    }
+
+    function votar_carole_tuesday(){
+        votos_carole_tueday ++;
+        votos ++;
+
+        total_votos_carole_tuesday.innerHTML = votos_carole_tueday;
+        total_votos.innerHTML = votos;
+    }
+
+</script>
