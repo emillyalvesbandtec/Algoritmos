@@ -22,22 +22,20 @@
 </html>
 
 <script>
-    var salario_atual = Number(salario.value);
+    var salario_atual;
 
     function confirmar_salario(){
+        salario_atual = Number(salario.value);
         grana_atual.innerHTML = `Grana atual: R$${salario_atual}`;
     }
-
     function pagar_conta_100(){
         salario_atual -= 100;
         grana_atual.innerHTML = `Grana atual: R$${salario_atual}`;
     }
-
     function pagar_conta_500(){
         salario_atual -= 500;
         grana_atual.innerHTML = `Grana atual: R$${salario_atual}`;
     }
-
     function ganhar_2000_loteria(){
         salario_atual += 2000;
         grana_atual.innerHTML = `Grana atual: R$${salario_atual}`;
