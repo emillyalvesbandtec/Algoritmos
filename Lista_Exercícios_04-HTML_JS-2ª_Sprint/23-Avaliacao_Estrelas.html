@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Como esta meu atendimento?</h1>
+    <select id="estrelas">
+        <option value="1"> 1 estrela </option>
+        <option value="2"> 2 estrelas </option>
+        <option value="3"> 3 estrelas </option>
+        <option value="4"> 4 estrelas </option>
+        <option value="5"> 5 estrelas </option>
+    </select>
+    <br>
+    <button onclick="avaliar()">Confirmar avaliação</button>
+    <br><br>
+    
+    <span>
+        Média atual: <span id="media_atual_estrelas">0</span> estrelas
+        <br>
+        Número de avaliações: <span id="numero_avaliacoes">0</span>
+    </span>
+</body>
+</html>
+
+<script>
+
+    var total_estrela = 0;
+    var total_avaliacoes = 0;
+
+    function avaliar(){
+        total_avaliacoes ++;
+
+        total_estrela += Number(estrelas.value);
+
+        media_atual_estrelas.innerHTML = `${total_estrela / total_avaliacoes}`;
+        numero_avaliacoes.innerHTML = `${total_avaliacoes}`;
+
+    }
+
+</script>
