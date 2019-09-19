@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Total guardado: R$<span id="total_guardado">0.00</span>
+    <br>
+    Operações efetuadas: <span id="operacoes_efetuadas">0</span>
+    <br><br>
+    <select id="deposito">
+        <option value="0.25"> Depositar R$0,25 </option>
+        <option value="0.5"> Depositar R$0,50 </option>
+        <option value="1"> Depositar R$1,00 </option>
+        <option value="2"> Depositar R$2,00 </option>
+        <option value="-1"> Tirar R$1,00 </option>
+        <option value="-2"> Tirar R$2,00</option>
+    </select>
+    <br><br>
+    <button onclick="confirmar_operacao()">Confirmar operação</button>
+</body>
+</html>
+
+<script>
+    var total_depositado = 0;
+    var total_operacoes = 0;
+
+    function confirmar_operacao(){
+        total_depositado += Number(deposito.value);
+        total_operacoes ++;
+
+        total_guardado.innerHTML = `${total_depositado}`;
+        operacoes_efetuadas.innerHTML = `${total_operacoes}`;
+    }
+</script>
