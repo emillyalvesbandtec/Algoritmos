@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <img id="homem_formiga" style="width: 200px" src="https://2.bp.blogspot.com/-oQ7NekZ4RIk/V1IbMLwiF-I/AAAAAAAAEMc/kGdo23O_CkIfNz1M2Tp_Cuy_diUhVTJLACLcB/s1600/captain_america__civil_war___ant_man_01_png_by_imangelpeabody-d9xd4c0.png" alt="">
+     <br>
+    <select id="tamanho">
+        <option value="0"> Normal </option>
+        <option value="50"> Grande </option>
+        <option value="300"> Enorme </option>
+        <option value="-50"> Pequeno </option>
+        <option value="-100"> Minúsculo </option>
+    </select>
+    <span id="tamanho_original" style="display: none">100</span>
+    <br>    
+    <button onclick="redmensionar_imagem()">Redmensionar imagem</button>
+</body>
+</html>
+
+<script>
+    var tamanho_original_homem_formiga = 200;
+
+    function redmensionar_imagem(){
+        var tamanho_homem_atual = tamanho_original_homem_formiga + Number(tamanho.value);
+
+        homem_formiga.style.width = `${tamanho_homem_atual}px`
+    }
+</script>
