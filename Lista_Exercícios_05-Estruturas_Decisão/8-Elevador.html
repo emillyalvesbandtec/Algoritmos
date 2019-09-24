@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+    <h3>Estrutura de decisão: IF</h3>
+
+    Quantidade de homens no elevador
+    <input type="text" id="qtd_homem_elevador">
+    <br>
+    Quantidade de mulheres no elevador
+    <input type="text" id="qtd_mulher_elevador">
+    <br>
+    <button onclick="ligar()">Ligar elevador</button>
+    <br>
+    <span id="msg_elevador"></span>
+
+</body>
+</html>
+<script>
+
+function ligar() {
+    
+    var qtd_mulher = Number(qtd_mulher_elevador.value);
+    var qtd_homem = Number(qtd_homem_elevador.value);
+
+    var peso_total = (qtd_mulher * 70) + (qtd_homem * 90);
+
+    if(peso_total < 500){
+        msg_elevador.style.color = 'green';
+        msg_elevador.innerHTML = `Elevador vai se mover, pois está com ${peso_total}kg`;
+    }
+    
+    if(peso_total >= 500){
+        var peso_perder = peso_total - 500;
+
+        msg_elevador.style.color = 'red';
+        msg_elevador.innerHTML = `Alguém precisa descer. Precisa perder ${peso_perder}kg para mover o elevador`;
+    }
+
+}
+</script>
