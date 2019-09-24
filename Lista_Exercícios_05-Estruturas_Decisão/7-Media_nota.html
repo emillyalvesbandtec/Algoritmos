@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+    <h3>Estrutura de decisão: IF</h3>
+
+    Primeira nota
+    <input type="text" id="primeira_nota">
+    <br>
+    Segunda nota
+    <input type="text" id="segunda_nota">
+    <br>
+    <button onclick="media()">Virificar situação</button>
+
+</body>
+</html>
+<script>
+
+function media() {
+    
+    var nota1 = Number(primeira_nota.value);
+    var nota2 = Number(segunda_nota.value);
+    var media = (nota1 + nota2)/2;
+
+    if(media >=5){
+        alert('Parabéns, aprovado!');
+    }
+    
+    if(media < 5){
+        alert('Tente outra vez...');
+    }
+
+}
+</script>
