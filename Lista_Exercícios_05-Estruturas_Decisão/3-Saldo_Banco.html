@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+    <h3>Estrutura de decisão: IF</h3>
+
+    Qual seu saldo na conta do Banco?
+    <input type="text" id="saldo_banco">
+    <button onclick="financas()">Verificar finanças</button>
+    <br><br>
+    <span id="resultado_financa" style="background-color: white; font-size: 40px"></span>
+
+</body>
+</html>
+<script>
+function financas() {
+    var saldo = Number(saldo_banco.value);
+
+    if(saldo == 0){
+        resultado_financa.style.backgroundColor = 'black';
+        resultado_financa.style.color = 'white';
+        resultado_financa.innerHTML = 'Conta Zerada';
+    }
+
+    if(saldo < 0){
+        resultado_financa.style.backgroundColor = 'red';
+        resultado_financa.innerHTML = 'Está devendo!';
+
+    }
+
+    if(saldo <= -1000){
+        resultado_financa.style.backgroundColor = 'red';
+        resultado_financa.innerHTML = 'Está devendo! <br> Igual o Corinthians: No SERASA!';
+    }
+
+    if(saldo > 0){
+        resultado_financa.style.backgroundColor = 'blue';
+        resultado_financa.innerHTML = 'Saldo positivo!';
+    }
+
+}
+</script>
