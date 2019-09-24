@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+    <h3>Estrutura de decisão: IF</h3>
+
+    Qual é a sua idade?
+    <input type="text" id="idade">
+    <button onclick="ir_festa()">Ir para a festa</button>
+
+</body>
+</html>
+<script>
+function ir_festa() {
+    var idade_pessoa = Number(idade.value);
+
+    if (idade_pessoa < 18) {
+
+        alert(`Pedir permissão pro responsável`);
+    }
+
+    alert('#partiuFesta');
+}
+</script>
