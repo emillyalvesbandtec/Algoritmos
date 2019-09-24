@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+    <h3>Estrutura de decisão: IF</h3>
+
+    Qual é o peso total no elevador?
+    <input type="text" id="peso_elevador">
+    <button onclick="ligar()">Ligar elevador</button>
+
+</body>
+</html>
+<script>
+
+function ligar() {
+    
+    var peso_total_elevador = Number(peso_elevador.value);
+
+    if(peso_total_elevador < 500){
+        alert('Elevador vai se mover');
+    }
+
+    if(peso_total_elevador >= 500){
+        alert('Alguém precisa descer do elevador');
+    }
+}
+</script>
