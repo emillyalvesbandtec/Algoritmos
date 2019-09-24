@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+    <h3>Estrutura de decisão: IF</h3>
+
+    Quanto você tem economizado?
+    <input type="text" id="valor_economizado">
+    <button onclick="poder_compra()">Poder de compra</button>
+    <br><br>
+    <span id="msg_compra"></span>
+
+</body>
+</html>
+<script>
+
+function poder_compra() {
+    
+    var economizado = Number(valor_economizado.value);
+
+    if(economizado <= 0){
+        msg_compra.innerHTML = 'Nada de compras :(';
+    }
+
+    if(economizado > 0){
+        
+        msg_compra.innerHTML = 'Viajem de ida e volta pra Praia Grande';
+    
+        if(economizado >= 4000){
+        msg_compra.innerHTML += '<br> Uma boa moto usada';
+        }
+
+        if(economizado > 4000){
+            msg_compra.innerHTML += '<br> Mais alguma bobagem lega';
+        }
+    }    
+}
+</script>
