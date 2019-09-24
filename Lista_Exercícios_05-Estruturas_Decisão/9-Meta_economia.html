@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estruturas de decisão</title>
+</head>
+<body>
+    <h3>Estrutura de decisão: IF</h3>
+
+    Qual a sua meta de economia?
+    <input type="text" id="meta_economia">
+    <br>
+    Quanto você tem guardado?
+    <input type="text" id="qtd_guardado">
+    <br>
+    <button onclick="analisar()">Analisar economia</button>
+    <br>
+    <span id="msg_economia"></span>
+
+</body>
+</html>
+<script>
+
+function analisar() {
+    
+    var meta = Number(meta_economia.value);
+    var guardado = Number(qtd_guardado.value);
+
+    if(meta == guardado){
+        msg_economia.innerHTML = 'Parabéns, meta alcançada!';
+    }
+
+    if(meta < guardado){
+        var ultrapassada = guardado - meta;
+        msg_economia.innerHTML = `Meta ultrapassada em R$${ultrapassada}`;
+    }
+
+    if(guardado < meta){
+        var falta = meta - guardado;
+        msg_economia.innerHTML = `Força! Ainda em busca da meta! Falata R$${falta}`;
+    }
+
+}
+</script>
