@@ -28,7 +28,7 @@
             total_vida.innerHTML= `${vida_atual}`;
             frase_lutador.innerHTML = 'Lutador ainda vivo!'
         }
-        else{
+        if(vida_atual <= 0){
             frase_lutador.innerHTML = 'Lutador já era!'
         }
         
@@ -43,7 +43,7 @@
             total_vida.innerHTML= `${vida_atual}`;
             frase_lutador.innerHTML = 'Lutador ainda vivo!'
         }
-        else{
+        if(vida_atual <= 0){
             frase_lutador.innerHTML = 'Lutador já era!'
         }
 
