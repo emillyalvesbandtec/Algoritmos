@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Vida do Lutador: <span id="total_vida">1000</span></h1>
+    <br>
+    <h2 id="frase_lutador"></h2>
+    <br>
+    <button onclick="apanhar()">Apanhar</button>
+    <button onclick="concentra_forca()">Concentrar força</button>
+
+</body>
+</html>
+
+<script>
+    var vida_atual = Number(total_vida.innerHTML);
+
+    function apanhar(){
+        if(vida_atual > 0){
+            vida_atual -= 100;
+
+            total_vida.innerHTML= `${vida_atual}`;
+            frase_lutador.innerHTML = 'Lutador ainda vivo!'
+        }
+        else{
+            frase_lutador.innerHTML = 'Lutador já era!'
+        }
+        
+
+
+    }
+
+    function concentra_forca(){
+        if(vida_atual > 0){
+            vida_atual += 10;
+
+            total_vida.innerHTML= `${vida_atual}`;
+            frase_lutador.innerHTML = 'Lutador ainda vivo!'
+        }
+        else{
+            frase_lutador.innerHTML = 'Lutador já era!'
+        }
+
+    }
+
+</script>
