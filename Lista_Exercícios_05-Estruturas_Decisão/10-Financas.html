@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Valor guardado: R$<span id="valor_guardado">0</span></h1>
+    <br>
+    <h2 id="status_financa"></h2>
+    <br>
+    <button onclick="guardar5()">Guardar R$5,00</button>
+    <button onclick="gastar10()">Gastar R$10,00</button>
+
+
+</body>
+</html>
+
+<script>
+    var total_guardado = Number(valor_guardado.innerHTML);
+
+    function guardar5(){
+        total_guardado += 5;
+
+        valor_guardado.innerHTML = `${total_guardado}`;
+
+        if(total_guardado >= 0){
+            status_financa.innerHTML = `Finanaças OK!`;
+            status_financa.style.color = `blue`;
+            
+            if(total_guardado >= 100){
+                status_financa.innerHTML += `<br>#ostentação`;
+            }
+        }
+
+        if(total_guardado < 0){
+            status_financa.innerHTML = `Finanças em perigo!`;
+            status_financa.style.color = `red`;
+
+            if(total_guardado < -20){
+                status_financa.innerHTML += `<br>Quase um Corinthians!`;
+            }
+        }
+        
+    }
+
+    function gastar10(){
+        total_guardado -= 10;
+
+        valor_guardado.innerHTML = `${total_guardado}`;
+
+        if(total_guardado >= 0){
+            status_financa.innerHTML = `Finanaças OK!`;
+            status_financa.style.color = `blue`;
+            
+            if(total_guardado >= 100){
+                status_financa.innerHTML += `<br>#ostentação`;
+            }
+        }
+
+        if(total_guardado < 0){
+            status_financa.innerHTML = `Finanças em perigo!`;
+            status_financa.style.color = `red`;
+
+            if(total_guardado < -20){
+                status_financa.innerHTML += `<br>Quase um Corinthians!`;
+            }
+        }
+        
+    }
+
+</script>
