@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="qtd_elefante">
+
+    <button onclick="atazanar()">Atazanar a medium</button>
+
+    <div id="mostrar_elefantes"></div>
+
+</body>
+</html>
+
+<script>
+    function atazanar(){
+        var qtd_elefantes = Number(qtd_elefante.value);
+
+        var elefantes = 0;
+
+        mostrar_elefantes.innerHTML = ``;
+
+        while(elefantes < qtd_elefantes){
+            elefantes ++;
+
+            mostrar_elefantes.innerHTML = `1 elefante incomodam muita gente`;
+
+            if(qtd_elefantes > 1){
+                var qtd_incomodam = 0;
+                var incomodam = "";
+
+                while (qtd_incomodam < qtd_elefantes){
+                   incomodam += ` incomodam `;
+                   qtd_incomodam ++;
+                }
+
+                mostrar_elefantes.innerHTML += `<br>${elefantes} elefantes ${incomodam} muito mais`
+            }
+
+
+        }
+    }
+</script>
