@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Digite uma frase <input id="frase" onkeyup="descobrir_letra()"> <br>
+
+    A primeira letra é: <span id="primeira_letra">?</span>
+    <br>
+    A ultima letra é: <span id="ultima_letra">?</span>
+
+</body>
+</html>
+
+<script>
+    function descobrir_letra(){
+        primeira_letra.innerHTML = `${frase.value[0]}`;
+
+        ultima_letra.innerHTML = `${frase.value[frase.value.length-1]}`;        
+    }
+</script>
