@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    qtd<input type="text" id="qtd"> <br>
+    mensagem<input type="text" id="mensagem">
+
+
+    <button onclick="atazanar()">Papagaio</button>
+
+
+</body>
+</html>
+
+<script>
+    function atazanar(){
+
+        var qtd_vezes = Number(qtd.value);
+
+        var mostrar_mensagem = "";
+
+        var contador = 0;
+
+        while(contador < qtd_vezes){
+            
+            mostrar_mensagem += `${mensagem.value} `
+
+            contador++;
+        }
+        alert(mostrar_mensagem);
+    }
+</script>
