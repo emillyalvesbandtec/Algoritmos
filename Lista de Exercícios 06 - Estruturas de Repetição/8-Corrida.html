@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Quantas voltas o carro dará em uma corrida <br>
+    <input type="text" id="qtd_voltas"> <br>
+    <button onclick="iniciar_corrida()">Iniciar corrida</button>
+
+    <div id="mensagem_voltas"></div>
+</body>
+</html>
+
+<script>
+    function iniciar_corrida(){
+        var voltas = Number(qtd_voltas.value);
+        var contador = 0;
+
+        mensagem_voltas.innerHTML = ``;
+
+        while(contador < voltas){
+            contador ++;
+
+            mensagem_voltas.innerHTML += `Carro dando a ${contador}º volta <br>`;
+        }
+
+        mensagem_voltas.innerHTML += `<br> Corrida finalizada!`
+    }
+</script>
