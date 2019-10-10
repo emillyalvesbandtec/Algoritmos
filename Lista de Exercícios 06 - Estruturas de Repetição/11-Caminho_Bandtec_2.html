@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Quantos onibus você precisa pegar? <br>
+    <input type="text" id="qtd_onibus"> <br>
+
+    Quantos trens você precisa pegar? <br>
+    <input type="text" id="qtd_trens"> <br>
+    
+    Quantos metros você precisa pegar <br>
+    <input type="text" id="qtd_metros"> <br>
+
+    <button onclick="partiu()">#Partiu Trajeto</button>
+    <br>
+    <br>
+    <div id="msg_onibus" style="color:red"></div>
+    <br>
+    <div id="msg_trem" style="color:green"></div>
+    <br>
+    <div id="msg_metro" style="color:blue"></div>
+    
+
+</body>
+</html>
+
+<script>
+    function partiu(){
+        var onibus = Number(qtd_onibus.value);
+        var trem = Number(qtd_trens.value);
+        var metro = Number(qtd_metros.value);
+
+        var contador_onibus = 0;
+        var contador_trem = 0;
+        var contador_metro = 0;
+
+        msg_onibus.innerHTML = "";
+        msg_trem.innerHTML = "";
+        msg_metro.innerHTML = "";
+
+        while(contador_onibus < onibus){
+
+            if(contador_onibus == 0){
+                contador_onibus++;
+
+                msg_onibus.innerHTML += `Pegando o ${contador_onibus}º buzão <br>`;
+            }
+
+            if(contador_onibus > 0 && contador_onibus < 2){
+                contador_onibus++;
+
+                msg_onibus.innerHTML += `Pegando o ${contador_onibus}º buzão "Começando a cansar"<br>`;
+            }
+
+            if(contador_onibus > 1){
+                contador_onibus++;
+
+                msg_onibus.innerHTML += `Pegando o ${contador_onibus}º buzão "Já cansado!"<br>`;
+            }
+        }
+
+        while(contador_trem < trem){
+            if(contador_trem == 0){
+                contador_trem++;
+
+                msg_trem.innerHTML += `Pegando o ${contador_trem}º trem <br>`;
+            }
+
+            if(contador_trem > 0 && contador_trem < 2){
+                contador_trem++;
+
+                msg_trem.innerHTML += `Pegando o ${contador_trem}º trem "Começando a cansar"<br>`;
+            }
+
+            if(contador_trem > 1){
+                contador_trem++;
+
+                msg_trem.innerHTML += `Pegando o ${contador_trem}º trem "Já cansado!"<br>`;
+            }
+        }
+
+        while(contador_metro < metro){
+
+            if(contador_metro == 0){
+                contador_metro++;
+
+                msg_metro.innerHTML += `Pegando o ${contador_metro}º metrô <br>`;
+            }
+
+            if(contador_metro > 0 && contador_metro < 2){
+                contador_metro ++;
+
+                msg_metro.innerHTML += `Pegando o ${contador_metro}º metrô "Começando a cansar"<br>`;
+            }
+
+            if(contador_metro > 1){
+                contador_metro++;
+
+                msg_metro.innerHTML += `Pegando o ${contador_metro}º metro "Já cansado!"<br>`;
+            }
+        }
+    }
+</script>
