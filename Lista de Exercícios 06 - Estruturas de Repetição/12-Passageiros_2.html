@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Quantas pessoas vão entrar no carro? <br>
+    <input type="text" id="qtd_passageiros"> <br>
+
+    Quantas pessoas o veiculo consegue comportar? <br>
+    <input type="text" id="comporta_passageiros"> <br>
+
+    <button onclick="partiu()">#Partiu carona</button>
+
+    <div id="mensagem_passageiros"></div>
+</body>
+</html>
+
+<script>
+    function partiu(){
+        var passageiros = Number(qtd_passageiros.value);
+        var comporta = Number(comporta_passageiros.value);
+
+        var contador = 0;
+        
+        mensagem_passageiros.innerHTML = ``;
+
+        while(contador < passageiros){
+                        
+            if(contador == 0){
+                contador++;
+                mensagem_passageiros.innerHTML += `Entrou o ${contador}º passageiro (que é o(a) motorista) <br>`;
+            }
+            if(contador <= comporta){
+                contador ++;
+                mensagem_passageiros.innerHTML += `Entrou o ${contador}º passageiro <br>`;
+                
+            }
+            if(contador >= comporta){
+                contador++;
+                mensagem_passageiros.innerHTML += `O ${contador} passageiro terá que esperar! <br>`;
+                
+            }
+        }       
+    }
+</script>
